@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  <script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/modernizr.js'></script>
+<script src='assets/js/app.js'></script>
+  
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  
+  <title>New Project</title>
+  
+</head>
+
+<body>
+	
+  <header class="header">
+  
+  	<div class="container">
+  	
+	  	<h1 class="logo"><a href="mes-evaluations.html">Logo</a></h1>
+	  
+	    <nav>
+			  <ul class="nav">
+			    <li><a href="index.html">Dashboard</a></li>
+			    <li><a href="mes-cours.html">Mes cours</a></li>
+			    <li><a href="mes-evaluations.html">Mes évaluations</a></li>
+			    <li><a href="mes-classes.html">Mes classes</a></li>
+			  </ul>
+			  
+			  <ul class="notif">
+		    	<li class="notif__element notif__element--notification">
+		    		<a href="#">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#notification" />
+						</svg>
+			    	</a>
+		    	</li>
+		    	<li class="notif__element">
+		    		<a href="#">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#profil" />
+						</svg>
+		    		</a>
+		    		<ul class="notif-dropdown">
+		    			<li class="notif-dropdown__element"><a href="#">Paramètre</a></li>
+		    			<li class="notif-dropdown__element"><a href="#">Déconnexion</a></li>
+		    		</ul>
+		    	</li>
+		    </ul>
+			  
+		</nav>
+
+  	</div>
+
+  </header>
+
+  <main>
+  	
+  	<div class="container">  	
+  	  	
+	  	<header class="main__header">
+			   
+		    <ul class="header__breadcrumbs breadcrumb">
+		    	<a href="mes-evaluations.html">mes évaluation</a>
+		    	<a class='current' href="mes-evaluations-tfa-single.html">évaluation TFA</a>
+		    </ul>
+		    
+		    <h1 class="header__title"><a href="#">Évaluation TFA</a> - <small>114 étudiants</small></h1> 
+		    
+		    <ul class="header-nav">
+		    	<li class="header-nav__element">
+		    		<a title="Vue individuelle" href="mes-evaluations-tfa-tableau.html">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#tableau" />
+						</svg>
+			    	</a>
+			    </li>
+		    </ul>
+		    
+	  	</header> 	
+	    
+		<section class="main__section">
+		    
+		  	<h1 class="main__sectiontitle">Arnaud Poffe - <small>3/114</small></h1>  
+		  	
+		  	<ul class="navstudent">
+			  	<li class="navstudent__element"><a href="#">Étudiant précédent</a></li>
+			  	<li class="navstudent__element"><a href="#">Étudiant suivant</a></li>
+			  	
+		  	</ul>
+		    
+		    <ul class="accordion-tabs">
+			  <li class="tab-header-and-content">
+			    <a href="#" class="is-active tab-link">Fiche étudiant</a>
+			    <div class="tab-content">
+			      
+			      <div class="fiche">
+					    
+					    <section class="fiche__info">
+						    
+						    <img class="fiche__photo" src="assets/images/POFFE-Arnaud-2TID1.jpg" alt="" />
+						    
+						    <h1>Arnaud Poffe - <small>2TID1</small></h1>
+						    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						    
+						     <ul class="alert">
+						    	
+						    	<li class="alert__element">
+						    		<svg viewbox="0 0 512 512">
+									    <use xlink:href="assets/svg/defs.svg#favoris-blank" />
+									</svg>
+							    </li>
+							    <li class="alert__element">
+						    		<svg viewbox="0 0 512 512">
+									    <use xlink:href="assets/svg/defs.svg#warning-blank" />
+									</svg>
+							    </li>
+						    	
+						    </ul>
+						    
+					    </section>
+					    <section class="fiche__note">
+						    
+						    <h1 class="fiche__title fiche__title--small">Évaluation</h1>
+						    <dl class="note">
+						    	<dt class="note__title">Note</dt>
+						    	<dd class="note__input note__input--disabled"><input class="note__inputtext" type="text" disabled="disabled" value="12" /></dd>
+						    	<dt class="note__title">Présence</dt>
+						    	<dd class="note__input">
+						    		<select>
+							    		<option value="p">Présent</option>
+							    		<option value="pr">PR</option>
+							    		<option value="pp">PP</option>
+						    		</select>
+						    	</dd>
+						    </dl>
+					    </section>
+					    <section class="fiche__evaluation">
+						    
+						    <h1 class="fiche__title fiche__title--small">Évaluation: TFA</h1>
+						    
+						    <table class="table-borders">
+								  <thead>
+								    <tr>
+								      <th>Moi</th>
+								      <th>Prof 2</th>
+								      <th>Prof 3</th>
+								      <th>Prof 4</th>
+								      <th>Prof 5</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>
+								      	<select>
+									    		<option disabled="disabled" selected="selected"></option>
+									    		<option value="B">B</option>
+									    		<option value="S">S</option>
+									    		<option value="I">I</option>
+								    		</select>
+						    			</td>
+								      <td>S</td>
+								      <td>B</td>
+								      <td>S</td>
+								      <td>S</td>
+								    </tr>
+							    
+						    </table>
+						    
+					    </section>
+					    <section class="fiche__critere">
+						    
+						    <h1 class="fiche__title fiche__title--small">Critère d'évaluation: TFA</h1>
+						    
+						    <table class="table-borders">
+								  <thead>
+								    <tr>
+								      <th>Critère 1</th>
+								      <th>Critère 2</th>
+								      <th>Critère 3</th>
+								      <th>Critère 4</th>
+								      <th>Critère 5</th>
+								      <th>Critère 6</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td><input type="checkbox" /></td>
+								      <td><input type="checkbox" /></td>
+								      <td><input type="checkbox" /></td>
+								      <td><input type="checkbox" /></td>
+								      <td><input type="checkbox" /></td>
+								      <td><input type="checkbox" /></td>
+								    </tr>
+							    
+						    </table>
+						    
+					    </section>
+					    
+				    </div>
+			      
+			    </div>
+			  </li>
+			  
+			  <li class="tab-header-and-content">
+			    <a href="#" class="tab-link">Stats</a>
+			    <div class="tab-content">
+				
+					<p>Les stats sur les notes de l'étudiant.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+			    </div>
+			  </li>
+			  
+			</ul>
+			
+			<script>
+				$(document).ready(function () {
+				  $('.accordion-tabs').each(function(index) {
+				    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+				  });
+				
+				  $('.accordion-tabs').on('click', 'li > a', function(event) {
+				    if (!$(this).hasClass('is-active')) {
+				      event.preventDefault();
+				      var accordionTabs = $(this).closest('.accordion-tabs');
+				      accordionTabs.find('.is-open').removeClass('is-open').hide();
+				
+				      $(this).next().toggleClass('is-open').toggle();
+				      accordionTabs.find('.is-active').removeClass('is-active');
+				      $(this).addClass('is-active');
+				    } else {
+				      event.preventDefault();
+				    }
+				  });
+				});
+			</script>	
+		    	  
+		    
+		    <section class="comments">
+			    
+			    <h1 class="main__sectiontitle">Discussions sur l'étudiant et le projet</h1>
+			    
+			    
+			    <div class="comment">
+				  <div class="comment-image">
+				    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo image">
+				  </div>
+				  <div class="comment-content">
+				    <h1>Alexandre Plennevaux</h1>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
+				    <p class="comment-detail">27/09/14 — <a href="#">Modifier</a> ou <a href="#">Supprimer</a></p>
+				  </div>
+				</div>
+				
+				<div class="comment">
+				  <div class="comment-image">
+				    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="Logo image">
+				  </div>
+				  <div class="comment-content">
+				    <h1>Another One</h1>
+				    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, aspernatur, quia modi minima debitis tempora ducimus quam vero impedit alias earum nemo error tenetur sed.</p>
+				    <p class="comment-detail">Date or details about this post</p>
+				  </div>
+				</div>
+				
+				<div class="comment">
+				  <div class="comment-image">
+				    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="Logo image">
+				  </div>
+				  <div class="comment-content">
+				    
+				    <input class="comment__input" type="text" placeholder="Ajouter un commentaire sur l'étudiant ou son travail" />
+				    
+				  </div>
+				</div>			    
+			    
+		    </section>	  
+		    	    
+		</section>
+		
+		<aside class="listing">
+			
+			<h1 class="listing__title">Listing global</h1>
+			
+			<ul class="liststudent">
+				<li class="liststudent__element"><a href="#">Arnaud Poffe</a></li>
+				<li class="liststudent__element"><a href="#">John Doe</a></li>
+				<li class="liststudent__element"><a href="#">Remy</a></li>
+				<li class="liststudent__element"><a href="#">Philippe</a></li>
+				<li class="liststudent__element"><a href="#">Alexandre</a></li>
+				<li class="liststudent__element"><a href="#">François</a></li>
+				<li class="liststudent__element"><a href="#">Christian</a></li>
+				<li class="liststudent__element"><a href="#">François</a></li>
+				<li class="liststudent__element"><a href="#">Olivier</a></li>
+				<li class="liststudent__element"><a href="#">Kooka</a></li>
+				<li class="liststudent__element liststudent__element--current"><a href="#">Emeric</a></li>
+				<li class="liststudent__element"><a href="#">Bob</a></li>
+				<li class="liststudent__element"><a href="#">François</a></li>
+				<li class="liststudent__element"><a href="#">Christian</a></li>
+				<li class="liststudent__element"><a href="#">François</a></li>
+				<li class="liststudent__element"><a href="#">Olivier</a></li>
+				<li class="liststudent__element"><a href="#">Kooka</a></li>
+				<li class="liststudent__element"><a href="#">Emeric</a></li>
+				<li class="liststudent__element"><a href="#">Bob</a></li>
+			</ul>
+		</aside>
+      
+      </div>
+      
+  </main>
+  
+	</div>
+
+</body>
+</html>

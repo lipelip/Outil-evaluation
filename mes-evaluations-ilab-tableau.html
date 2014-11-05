@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  <script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/modernizr.js'></script>
+<script src='assets/js/app.js'></script>
+  
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <link href='http://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  
+  <title>New Project</title>
+  
+</head>
+
+<body>
+	
+  <header class="header">
+  
+  	<div class="container">
+  	
+	  	<h1 class="logo"><a href="mes-evaluations.html">Logo</a></h1>
+	  
+	    <nav>
+			  <ul class="nav">
+			    <li><a href="index.html">Dashboard</a></li>
+			    <li><a href="mes-cours.html">Mes cours</a></li>
+			    <li><a href="mes-evaluations.html">Mes évaluations</a></li>
+			    <li><a href="mes-classes.html">Mes classes</a></li>
+			  </ul>
+			  
+			  <ul class="notif">
+		    	<li class="notif__element notif__element--notification">
+		    		<a href="#">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#notification" />
+						</svg>
+			    	</a>
+		    	</li>
+		    	<li class="notif__element">
+		    		<a href="#">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#profil" />
+						</svg>
+		    		</a>
+		    		<ul class="notif-dropdown">
+		    			<li class="notif-dropdown__element"><a href="#">Paramètre</a></li>
+		    			<li class="notif-dropdown__element"><a href="#">Déconnexion</a></li>
+		    		</ul>
+		    	</li>
+		    </ul>
+			  
+		</nav>
+
+  	</div>
+
+  </header>
+
+  <main>
+  	<div class="container">
+	  	
+	  	<header class="main__header">
+		   
+		    <ul class="header__breadcrumbs breadcrumb">
+		    	<a href="mes-evaluations.html">mes évaluation</a>
+		    	<a class='current' href="mes-evaluations-ilab-tableau.html">évaluation iLab</a>
+		    </ul>
+		    
+		    <h1 class="header__title"><a href="#">Évaluation iLab</a> - <small>46 étudiants</small></h1> 
+		    
+		    <ul class="header-nav">
+		    	<li class="header-nav__element">
+		    		<a class="button" href="#">Clôturer l'évaluation</a>
+		    	</li>
+		    	<li class="header-nav__element">
+		    		<a title="Vue individuelle" href="mes-evaluations-ilab-single.html">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#tableau" />
+						</svg>
+			    	</a>
+			    </li>
+		    </ul>
+		    
+	  	</header>	    
+    
+    	<table class="table-borders">
+		  <thead>
+		    <tr>
+		      <th>Heure de passage</th>
+		      <th>Nom de l'éudiant</th>
+		      <th>Classe</th>
+		      <th>Note globale</th>
+		      <th>Prof 1</th>
+		      <th>Prof 2</th>
+		      <th>Prof 3</th>
+		      <th></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>I</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>I</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		    <tr>
+		      <td>12h30</td>
+		      <td>Arnaud Poffe</td>
+		      <td>2TID1</td>
+		      <td>12/20</td>
+		      <td>S</td>
+		      <td>S</td>
+		      <td>B</td>
+		      <td><button>Déplier</button></td>
+		    </tr>
+		   
+		  </tbody>
+		</table>
+  	</div>
+  </main>
+  
+	</div>
+
+</body>
+</html>
