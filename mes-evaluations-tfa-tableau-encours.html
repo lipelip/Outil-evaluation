@@ -97,30 +97,85 @@
 		   
 		    <ul class="header__breadcrumbs breadcrumb">
 		    	<a href="mes-evaluations.html">mes évaluation</a>
-		    	<a class='current' href="mes-evaluations-tfa-tableau.html">évaluation TFA</a>
+		    	<a class='current' href="mes-evaluations-tfa-tableau-encours.html">évaluation TFA</a>
 		    </ul>
 		    
-		    <h1 class="header__title"><a href="#">Évaluation TFA</a> - <small>114 étudiants</small></h1> 
+		    <h1 class="header__title"><a href="#">Évaluation TFA</a> - <small>en cours</small> - <small>114 étudiants</small></h1> 
 		    
 		    <ul class="header-nav">
 		    	<li class="header-nav__element">
-		    		<a class="button" href="#">Clôturer l'évaluation</a>
+		    		<a class="button" href="mes-evaluations-tfa-single.html">Reprendre l'évaluation</a>
 		    	</li>
 		    	<li class="header-nav__element">
-		    		<a title="Vue individuelle" href="mes-evaluations-tfa-single.html">
-			    		<svg viewbox="0 0 512 512">
-						    <use xlink:href="assets/svg/defs.svg#tableau" />
-						</svg>
-			    	</a>
-			    </li>
+		    		<a class="button button--disabled" href="#">Clôturer l'évaluation</a>
+		    	</li>
 		    </ul>
 		    
 	  	</header>	    
-    
+	  	
+	  	<section class="section__alert">
+		  	
+			<ul class="navalert cf">
+				<li class="navalert__element">
+				
+					<h1 class="title--navalert">Étudiant en cours</h1>
+					
+					<ul class="sousnavalert sousnavalert--coeur">
+						<li class="sousnavalert__element">Arnaud Poffe - 47/114</li>
+						<li class="sousnavalert__element">12h30</li>
+						<li class="sousnavalert__element"><a href="mes-evaluations-tfa-single.html">Évaluer l'étudiant</a></li>
+					</ul>					
+				
+				</li>
+				<li class="navalert__element">
+				
+					<h1 class="title--navalert">Coup de coeur</h1>
+					
+					<ul class="sousnavalert sousnavalert--coeur">
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+					</ul>
+				
+				</li>
+				<li class="navalert__element">
+				
+					<h1 class="title--navalert">Les alertes</h1>
+					
+					<ul class="sousnavalert sousnavalert--alertes">
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+					</ul>
+				
+				</li>
+				<li class="navalert__element">
+				
+					<h1 class="title--navalert">Les étudiants non-évalués</h1>
+				
+					<ul class="sousnavalert sousnavalert--nonevalue">
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+						<li class="sousnavalert__element"><a href="#">Arnaud Poffe</a></li>
+					</ul>
+				
+				</li>
+			</ul>  			  	
+		  	
+	  	</section>
+	  	<section class="sectoin__progression">
+		  	
+		  	<progress value="41" max="100" class="progressbar"></progress>
+		  	
+	  	</section>
+	  	
     	<table class="table-borders">
 		  <thead>
 		    <tr>
 		      <th>Heure de passage</th>
+		      <th>Ordre</th>
+		      <th>Présence</th>
 		      <th>Nom de l'éudiant</th>
 		      <th>Classe</th>
 		      <th>Note globale</th>
@@ -135,7 +190,22 @@
 		  </thead>
 		  <tbody>
 		    <tr>
+			    <td colspan="13">
+				   
+				    <a class="moretableau--link" href="#">afficher les étudiants déjà évalués</a>
+				    
+				</td>
+		    </tr>
+		    <tr>
 		      <td>12h30</td>
+		      <td>47/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -149,6 +219,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>48/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -162,6 +240,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>49/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -175,6 +261,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>50/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -188,6 +282,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>51/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -201,6 +303,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>52/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -214,6 +324,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>53/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -227,6 +345,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>54/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -240,6 +366,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>55/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -253,6 +387,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>56/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -266,6 +408,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>57/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>
@@ -279,6 +429,14 @@
 		    </tr>
 		    <tr>
 		      <td>12h30</td>
+		      <td>58/114</td>
+		      <td>
+			    <select>
+					<option value="p">Présent</option>
+					<option value="pr">PR</option>
+		    		<option value="pp">PP</option>
+				</select>
+			  </td>
 		      <td>Arnaud Poffe</td>
 		      <td>2TID1</td>
 		      <td>12/20</td>

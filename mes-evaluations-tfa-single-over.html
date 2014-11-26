@@ -98,14 +98,18 @@
 			   
 		    <ul class="header__breadcrumbs breadcrumb">
 		    	<a href="mes-evaluations.html">mes évaluation</a>
-		    	<a class='current' href="mes-evaluations-tfa-single.html">évaluation TFA</a>
+		    	<a href="mes-evaluations-tfa-single.html">évaluation TFA</a>
 		    </ul>
 		    
 		    <h1 class="header__title"><a href="#">Évaluation TFA</a> - <small>114 étudiants</small></h1> 
 		    
 		    <ul class="header-nav">
 		    	<li class="header-nav__element">
-		    		<a class="button" href="mes-evaluations-tfa-tableau-encours.html">Afficher le tableau</a>
+		    		<a title="Vue individuelle" href="mes-evaluations-tfa-tableau-over.html">
+			    		<svg viewbox="0 0 512 512">
+						    <use xlink:href="assets/svg/defs.svg#tableau" />
+						</svg>
+			    	</a>
 			    </li>
 		    </ul>
 		    
@@ -120,95 +124,146 @@
 			  	<li class="navstudent__element"><a href="#">Étudiant suivant</a></li>
 			  	
 		  	</ul>
-		  	   
-			<section class="section__evaluation">
-			    
-			    <section class="fiche__evaluation">
-				    
-				    <h1 class="fiche__title fiche__title--small">Évaluation: TFA</h1>
-				    
-				    <table class="table-borders">
-						  <thead>
-						    <tr>
-						      <th>Moi</th>
-						      <th>Prof 2</th>
-						      <th>Prof 3</th>
-						      <th>Prof 4</th>
-						      <th>Prof 5</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <td>
-						      	<select>
-							    		<option disabled="disabled" selected="selected"></option>
-							    		<option value="B">B</option>
-							    		<option value="S">S</option>
-							    		<option value="I">I</option>
-						    		</select>
-				    			</td>
-						      <td>S</td>
-						      <td>B</td>
-						      <td>S</td>
-						      <td>S</td>
-						    </tr>
+		    
+		    <ul class="accordion-tabs">
+			  <li class="tab-header-and-content">
+			    <a href="#" class="is-active tab-link">Évaluation</a>
+			    <div class="tab-content">
+			      
+			      <div class="fiche">
 					    
-				    </table>
-				    
-			    </section>
-			    <section class="fiche__critere">
-				    
-				    <h1 class="fiche__title fiche__title--small">Critère d'évaluation: TFA</h1>
-				    
-				    <table class="table-borders">
-						  <thead>
-						    <tr>
-						      <th>Critère 1</th>
-						      <th>Critère 2</th>
-						      <th>Critère 3</th>
-						      <th>Critère 4</th>
-						      <th>Critère 5</th>
-						      <th>Critère 6</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <td><input type="checkbox" /></td>
-						      <td><input type="checkbox" /></td>
-						      <td><input type="checkbox" /></td>
-						      <td><input type="checkbox" /></td>
-						      <td><input type="checkbox" /></td>
-						      <td><input type="checkbox" /></td>
-						    </tr>
+					   
+					    <section class="fiche__evaluation">
+						    
+						    <h1 class="fiche__title fiche__title--small">Évaluation: TFA</h1>
+						    
+						    <table class="table-borders">
+								  <thead>
+								    <tr>
+								      <th>Moi</th>
+								      <th>Prof 2</th>
+								      <th>Prof 3</th>
+								      <th>Prof 4</th>
+								      <th>Prof 5</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td>
+								      	<select disabled="disabled">
+									    		
+									    		<option selected="selected" value="B">B</option>
+									    		<option value="S">S</option>
+									    		<option value="I">I</option>
+								    		</select>
+						    			</td>
+								      <td>S</td>
+								      <td>B</td>
+								      <td>S</td>
+								      <td>S</td>
+								    </tr>
+							    
+						    </table>
+						    
+					    </section>
+					    <section class="fiche__critere">
+						    
+						    <h1 class="fiche__title fiche__title--small">Critère d'évaluation: TFA</h1>
+						    
+						    <table class="table-borders">
+								  <thead>
+								    <tr>
+								      <th>Critère 1</th>
+								      <th>Critère 2</th>
+								      <th>Critère 3</th>
+								      <th>Critère 4</th>
+								      <th>Critère 5</th>
+								      <th>Critère 6</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td><input disabled="disabled" type="checkbox" /></td>
+								      <td><input checked="checked" disabled="disabled" type="checkbox" /></td>
+								      <td><input disabled="disabled" type="checkbox" /></td>
+								      <td><input disabled="disabled" type="checkbox" /></td>
+								      <td><input disabled="disabled" type="checkbox" /></td>
+								      <td><input disabled="disabled" type="checkbox" /></td>
+								    </tr>
+							    
+						    </table>
+						    
+					    </section>
 					    
-				    </table>
-				    
-			    </section>
-			    
-			    <ul class="alert">
-						    	
-			    	<li class="alert__element">
-			    		<a href="#">
-			    		<svg viewbox="0 0 512 512">
-						    <use xlink:href="assets/svg/defs.svg#favoris-blank" />
-						</svg>
-			    		</a>
-				    </li>
-				    <li class="alert__element">
-			    		<a href="#">
-			    		<svg viewbox="0 0 512 512">
-						    <use xlink:href="assets/svg/defs.svg#warning-blank" />
-						</svg>
-			    		</a>
-				    </li>
-			    	
-			    </ul>
-			    
-			</section>
-			    
+						<ul class="alert alert--fiche">
+							
+							<li class="alert__element alert__element--selected">
+								<a href="#">
+								<svg viewbox="0 0 512 512">
+								    <use xlink:href="assets/svg/defs.svg#favoris-blank" />
+								</svg>
+								</a>
+						    </li>
+						    <li class="alert__element">
+						    	<a href="#">
+								<svg viewbox="0 0 512 512">
+								    <use xlink:href="assets/svg/defs.svg#warning-blank" />
+								</svg>
+						    	</a>
+						    </li>
+							
+						</ul>
+					    
+				    </div>
+			      
+			    </div>
+			  </li>
+			  
+			  <li class="tab-header-and-content">
+			    <a href="#" class="tab-link">Fiche de l'étudiant</a>
+			    <div class="tab-content">
+				
+					 <section class="fiche__info">
+						    
+					    <img class="fiche__photo" src="assets/images/POFFE-Arnaud-2TID1.jpg" alt="" />
+					    
+					    <h1>Arnaud Poffe - <small>2TID1</small></h1>
+					    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					    
+				    </section>
+				
+			    </div>
+			  </li>
+			  
+			</ul>
+			
+			<script>
+				$(document).ready(function () {
+				  $('.accordion-tabs').each(function(index) {
+				    $(this).children('li').first().children('a').addClass('is-active').next().addClass('is-open').show();
+				  });
+				
+				  $('.accordion-tabs').on('click', 'li > a', function(event) {
+				    if (!$(this).hasClass('is-active')) {
+				      event.preventDefault();
+				      var accordionTabs = $(this).closest('.accordion-tabs');
+				      accordionTabs.find('.is-open').removeClass('is-open').hide();
+				
+				      $(this).next().toggleClass('is-open').toggle();
+				      accordionTabs.find('.is-active').removeClass('is-active');
+				      $(this).addClass('is-active');
+				    } else {
+				      event.preventDefault();
+				    }
+				  });
+				});
+			</script>	
+		    	  
+		    
 		    <section class="comments">
 			    
-			    <h1 class="main__sectiontitle">Notes sur l'étudiant et le projet</h1>
+			    <h1 class="main__sectiontitle">Discussions sur l'étudiant et le projet</h1>
+			    
 			    
 			    <div class="comment">
 				  <div class="comment-image">
@@ -257,17 +312,17 @@
 			    	<dd class="note__input note__input--disabled"><input class="note__inputtext" type="text" disabled="disabled" value="12" /></dd>
 			    	<dt class="note__title">Présence</dt>
 			    	<dd class="note__input">
-			    		<select>
-				    		<option value="p">Présent</option>
+			    		<select disabled="disabled">
+				    		<option selected="selected" value="p">Présent</option>
 				    		<option value="pr">PR</option>
 				    		<option value="pp">PP</option>
 			    		</select>
 			    	</dd>
 			    </dl>
 		    </section>
+		    
+		    <section>
 			
-			<section>
-
 				<h1 class="listing__title">Listing global</h1>
 				
 				<ul class="liststudent">
@@ -291,8 +346,9 @@
 					<li class="liststudent__element"><a href="#">Emeric</a></li>
 					<li class="liststudent__element"><a href="#">Bob</a></li>
 				</ul>
-				
-			</section>
+			
+		    </section>
+			
 		</aside>
       
       </div>
